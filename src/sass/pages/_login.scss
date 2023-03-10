@@ -1,0 +1,38 @@
+.login {
+    padding-top: 106px;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 10.58px;
+        margin-left: 97px;
+
+        &-1{
+            width: 24.75px;
+            height: 25pxpx;
+        }
+
+        &-2 {
+            width: 138.44px;
+            height: 36px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        margin-top: 73px;
+        padding: 0 67px;
+        align-items: flex-end;
+
+        &-image {
+            width: 600px;
+            height: 337.57px;
+            flex: 1;
+        }
+
+        &-form {
+            flex: 1;
+            margin-left: 116px;
+        }
+    }
+}
