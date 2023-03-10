@@ -30,6 +30,11 @@
       width: 90%;
       height: 40px;
       border: none;
+      padding-left: 10px;
+
+      &:focus {
+          outline: none;
+      }
     }
     &-icon {
       background-color: $custom-color;
