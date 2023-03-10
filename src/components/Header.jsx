@@ -1,23 +1,38 @@
-import React from 'react'
+import React from "react";
 
 export default function Header() {
   return (
     <div className="header">
-    <div className="logo">
-        <img src="../images/Union.png" alt="" />
-        <img src="../images/lendsqr.png" alt="" />
+      <div className="logo">
+        <img src="../images/Union.png" alt="" className="logo-1" />
+        <img src="../images/lendsqr.png" alt="" className="logo-2" />
+      </div>
+      <div className="header__right-content">
+        <div className="header__searchBar">
+          <input
+            placeholder="Search for anything"
+            className="header__searchBar-input"
+          />
+          <span className="header__searchBar-icon">
+            <img src="../images/Vector.png" alt="" />
+          </span>
+        </div>
+        <div className="header__profile">
+          <div className="header__doc">Docs</div>
+          <span className="header__notificaion">
+            <img src="../images/notification.png" alt="" />
+          </span>
+          <img
+            src="../images/image 4.png"
+            alt=""
+            className="header__profile-image"
+          />
+          <div className="header__profile-name">Adedeji</div>
+          <span className="header__profile-dropdown-icon">
+            <img src="../images/arrow-down.png" alt="" />
+          </span>
+        </div>
+      </div>
     </div>
-    <div className="searchBar">
-        <input placeholder="Search for anything"/>
-        <div className="icon"></div>
-    </div>
-    <div className="doc">Docs</div>
-    <div className="notificaion">Icon</div>
-    <div className="profile">
-        <img src="" alt="" className="profile__image"/>
-        <div className="profile__name">Adedeji</div>
-        <div className="profile__dropdown-icon">icon</div>
-    </div>
-</div>
-  )
+  );
 }

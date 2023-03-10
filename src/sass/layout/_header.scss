@@ -1,0 +1,78 @@
+.header {
+  // width: 1440px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  // justify-content: space-around;
+
+  &__right-content {
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 283px);
+  }
+
+  &__searchBar {
+    width: 400px;
+    height: 40px;
+    border: 1px solid $color-primary;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    // margin-right: auto;
+
+    &-input {
+      // padding: 12px 20px;
+      width: 90%;
+      height: 40px;
+      border: none;
+    }
+    &-icon {
+      background-color: $custom-color;
+      width: 56px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__doc {
+    font-size: 16px;
+    color: $color-primary;
+    margin-right: 50.18px;
+  }
+  &__notificaion {
+    width: 19.67px;
+    height: 22.74px;
+    color: $color-primary;
+    margin-right: 33.16px;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+
+    &-image {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+    &-name {
+      margin: 0 10px;
+    }
+
+    &-dropdown-icon {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
