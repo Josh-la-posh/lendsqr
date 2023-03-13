@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "../sass/main.scss";
+import {Link} from 'react-router-dom';
 
 class Login extends Component {
   render() {
@@ -31,7 +31,7 @@ class Login extends Component {
                 min={3}
               />
               <div className="form-forgotPassword">FORGOT PASSWORD?</div>
-              <button className="form-btn btn">LOG IN</button>
+              <Link to='/dashboard'><button className="form-btn btn">LOG IN</button></Link>
             </div>
           </div>
         </div>

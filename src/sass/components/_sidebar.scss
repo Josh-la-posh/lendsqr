@@ -1,0 +1,41 @@
+.sidebar {
+    &__container {
+        padding: 39px 0 30px 30px;
+    }
+
+    .title {
+        color: $color-primary;
+        font-size: 16px;
+        margin-bottom: 52px;
+    }
+
+    .pageTitle {
+        color: $color-primary;
+        font-size: 16px;
+        opacity: 0.6;
+    }
+
+    .subtitle__container {
+        margin-top: 41px;
+    }
+    .subtitle {
+        text-transform: uppercase;
+        color: $text-color;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .links {
+        list-style: none;
+        padding: 0;
+        .link {
+            font-size: 16px;
+            color: $color-primary;
+            opacity: 0.6;
+
+            &:not(last-child) {
+                margin-bottom: 31px;
+            }
+        }
+    }
+}
