@@ -14,7 +14,7 @@ export default function Header() {
             className="header__searchBar-input"
           />
           <span className="header__searchBar-icon">
-            <img src="../images/Vector.png" alt="" />
+            <img src="../images/search.png" alt="" />
           </span>
         </div>
         <div className="header__profile">

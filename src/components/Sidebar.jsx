@@ -5,7 +5,7 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__container">
-        <div className="title"><FontAwesomeIcon icon={duotone("briefcase")} />Switch Organization</div>
+        <div className="title"><FontAwesomeIcon icon={("briefcase")} />Switch Organization</div>
         <div className="pageTitle">Dashboard</div>
         <div className="subtitle__container">
           <div className="subtitle">customers</div>

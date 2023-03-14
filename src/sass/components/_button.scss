@@ -1,4 +1,14 @@
 .btn {
     border-radius: 8px;
     cursor: pointer;
+
+    &-2 {
+        border-radius: 8px;
+        cursor: pointer;
+        width: 98px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

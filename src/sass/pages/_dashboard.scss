@@ -1,0 +1,22 @@
+.dashboardPage {
+    display: flex;
+    height: calc(100vh - 100px);
+
+    .dashboard {
+        padding: 60px;
+        background-color: $pageContainer;
+        flex: 4;
+        overflow-y: scroll;
+
+        .pageTitle {
+            color: $color-primary;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .cardContainer {
+            display: flex;
+            gap: 26px;
+        }
+    }
+}
