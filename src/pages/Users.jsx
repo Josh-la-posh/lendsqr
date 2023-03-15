@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { URL } from "../url";
 import axios from "axios";
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 
 import UserPage from '../components/UserPage'
 
@@ -18,6 +20,14 @@ export default function Users() {
     console.log(data);
   }, []);
   return (
-    <UserPage data={data}/> 
+    <div className="dashboard">
+      <div className="dashboard__header">
+        <Header />
+      </div>
+      <div className="dashboard__body">
+        <Sidebar />
+        <UserPage data={data}/>
+      </div>
+    </div>
   )
 }

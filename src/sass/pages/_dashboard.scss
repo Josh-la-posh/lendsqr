@@ -1,22 +1,32 @@
-.dashboardPage {
+.dashboard {
+  &__header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  &__body {
     display: flex;
     height: calc(100vh - 100px);
+  }
+  &__content {
+    padding: 60px;
+    background-color: $pageContainer;
+    flex: 4;
+    overflow-y: scroll;
 
-    .dashboard {
-        padding: 60px;
-        background-color: $pageContainer;
-        flex: 4;
-        overflow-y: scroll;
-
-        .pageTitle {
-            color: $color-primary;
-            font-size: 24px;
-            font-weight: 500;
-        }
-
-        .cardContainer {
-            display: flex;
-            gap: 26px;
-        }
+    .pageTitle {
+      color: $color-primary;
+      font-size: $font24;
+      font-weight: $weight500;
     }
+    .cardContainer {
+      display: flex;
+      gap: 26px;
+
+      @include respond(tab-port) {
+        gap: 15px;
+      }
+    }
+  }
 }

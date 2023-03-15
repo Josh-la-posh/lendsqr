@@ -1,24 +1,50 @@
 .form {
   &-title {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: $font40;
+    font-weight: $weight700;
     color: $color-primary;
+
+    @include respond(tab-port) {
+      font-size: $font32;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 
   &-text {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: $font20;
+    font-weight: $weight400;
     color: $text-color;
-    margin-top: 20px;
-    margin-bottom: 60px;
+    margin-top: 1.25rem;
+    margin-bottom: 3.75rem;
+
+    @include respond(tab-port) {
+      font-size: $font18;
+      margin-top: 1rem;
+      margin-bottom: 2.75rem;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+    }
   }
   &-input {
-      width: 431px;
-      height: 50px;
-      padding-left: 16px;
+      width: 27rem;
+      height: 3.1rem;
+      padding-left: 1rem;
       border: 2px solid rgba(84, 95, 125, 0.15);
       border-radius: 5px;
-      margin-bottom: 24px;
+      margin-bottom: 1.5rem;
+
+      @include respond(tab-land) {
+        width: 20rem;
+      }
+
+      @include respond(phone) {
+        width: 22rem;
+      }
 
       &:focus {
         outline: none;
@@ -31,15 +57,24 @@
   }
   &-forgotPassword {
       color: $custom-color;
-      font-size: 12px;
-      font-weight: 600;
-      margin-bottom: 30px;
+      font-size: $font12;
+      font-weight: $weight600;
+      margin-bottom: 1.875rem;
+      cursor: pointer;
   }
   &-btn {
-      width: 447px;
-      height: 48px;
+      width: 28rem;
+      height: 3rem;
       background-color: $custom-color;
       color: #fff;
       border: none;
+
+      @include respond(tab-land) {
+        width: 21rem;
+      }
+
+      @include respond(phone) {
+        width: 23.5rem;
+      }
   }
 }

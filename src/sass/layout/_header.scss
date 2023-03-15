@@ -1,36 +1,50 @@
 .header {
-  // width: 1440px;
-  height: 100px;
+  height: 6.25rem;
   display: flex;
   align-items: center;
-  padding: 0 30px;
-  // justify-content: space-around;
+  padding: 0 1.875rem;
+  background: #fff;
 
   &__right-content {
-    padding: 0 60px;
+    padding: 0 3.75rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(100% - 283px);
+    width: calc(100% - 17.7rem);
+
+    @include respond(tab-port) {
+      width: 100%;
+      padding: 0;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__searchBar {
-    width: 400px;
-    height: 40px;
-    border: 1px solid $color-primary;
+    width: 25rem;
+    height: 2.5rem;
+    border: 1px solid rgba($color-primary, 0.2);
     border-radius: 8px;
     overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
-    // margin-right: auto;
+
+    @include respond(tab-land) {
+      width: 20rem;
+    }
+
+    @include respond(tab-port) {
+      width: 17rem;
+    }
 
     &-input {
-      // padding: 12px 20px;
       width: 90%;
-      height: 40px;
+      height: 2.5rem;
       border: none;
-      padding-left: 10px;
+      padding-left: 0.625rem;
 
       &:focus {
           outline: none;
@@ -38,8 +52,8 @@
     }
     &-icon {
       background-color: $custom-color;
-      width: 56px;
-      height: 40px;
+      width: 3.5rem;
+      height: 2.5rem;
       position: absolute;
       top: 0;
       right: 0;
@@ -51,15 +65,32 @@
   }
 
   &__doc {
-    font-size: 16px;
+    font-size: $font16;
     color: $color-primary;
-    margin-right: 50.18px;
+    margin-right: 3.136rem;
+
+    @include respond(tab-land) {
+      font-size: $font14;
+      margin-right: 2.7rem;
+    }
+
+    @include respond(tab-port) {display: none;
+    }
   }
   &__notificaion {
     width: 19.67px;
     height: 22.74px;
     color: $color-primary;
-    margin-right: 33.16px;
+    margin-right: 2.073rem;
+
+    @include respond(tab-land) {
+      width: 16px;
+      height: 19px;
+      margin-right: 1.688rem;
+    }
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__profile {
@@ -67,12 +98,24 @@
     align-items: center;
 
     &-image {
-      width: 48px;
-      height: 48px;
+      width: 3rem;
+      height: 3rem;
       border-radius: 50%;
+
+      @include respond(tab-land) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      @include respond(tab-port) {
+        width: 2rem;
+        height: 2rem;
+      }
     }
     &-name {
       margin: 0 10px;
+      font-size: $font16;
+      color: $color-primary;
     }
 
     &-dropdown-icon {

@@ -1,45 +1,101 @@
 .sidebar {
-    flex: 1;
-    overflow-y: scroll;
-    &__container {
-        padding: 39px 0 30px 30px;
-    }
+  overflow-y: scroll;
+  width: 283px;
+  margin-bottom: 1.938rem;
 
-    .title {
-        color: $color-primary;
-        font-size: 16px;
-        margin-bottom: 52px;
-        display: flex;
-        gap: 10px;
-    }
+  @include respond(tab-port) {
+      width: unset;
+  }
 
-    .pageTitle {
-        color: $color-primary;
-        font-size: 16px;
-        opacity: 0.6;
-    }
+  @include respond(phone) {
+      display: none;
+  }
 
-    .subtitle__container {
-        margin-top: 41px;
-    }
-    .subtitle {
-        text-transform: uppercase;
-        color: $text-color;
-        margin-bottom: 10px;
-        font-size: 12px;
-    }
+  &__container {
+    padding: 39px 0 30px 30px;
 
-    .links {
-        list-style: none;
-        padding: 0;
-        .link {
-            font-size: 16px;
-            color: $color-primary;
-            opacity: 0.6;
+    @include respond(tab-port) {
+        padding: 30px 20px 30px 30px;
+    }
+  }
 
-            &:not(last-child) {
-                margin-bottom: 31px;
-            }
+  .title {
+    color: $color-primary;
+    font-size: $font16;
+    margin-bottom: 3.25rem;
+    display: flex;
+    gap: 10px;
+
+    @include respond(tab-port) {
+      font-size: $font14;
+      margin-bottom: 2.75rem;
+    }
+  }
+
+  .pageTitle {
+    color: $color-primary;
+    font-size: $font16;
+    opacity: 0.6;
+    display: flex;
+    gap: 10px;
+
+    @include respond(tab-port) {
+      font-size: $font14;
+    }
+  }
+
+  .subtitle__container {
+    margin-top: 2.56rem;
+  }
+  .subtitle {
+    text-transform: uppercase;
+    color: $text-color;
+    margin-bottom: 0.625rem;
+    font-size: $font12;
+  }
+
+  .links {
+    list-style: none;
+    padding: 0;
+
+    .link {
+      font-size: $font16;
+      color: $color-primary;
+      opacity: 0.6;
+      display: flex;
+      gap: 10px;
+      padding: 0.625rem 0;
+
+      @include respond(tab-port) {
+        font-size: $font14;
+        padding: 0.4rem 0;
+      }
+
+      &:not(last-child) {
+        margin-bottom: 1.938rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 1.6rem;
         }
+      }
     }
+
+    .active {
+      background-color: rgba($custom-color, 0.06);
+      opacity: 1;
+      position: relative;
+      margin-left: -30px;
+      padding-left: 30px;
+
+      &::before {
+        content: "";
+        height: 100%;
+        width: 1.5%;
+        background-color: $custom-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
 }

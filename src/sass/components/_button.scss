@@ -11,4 +11,28 @@
         align-items: center;
         justify-content: center;
     }
+
+    &-3 {
+
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 12px 16px;
+    font-weight: $weight600;
+    font-size: $font14;
+          
+    @include respond(tab-land) {
+      padding: 10px 14px;
+      font-size: $font12;
+    }
+          
+    @include respond(tab-port) {
+      padding: 8px 12px;    }
+    font-size: $font10;
+    }
+          
+    @include respond(phone) {
+      padding: 6px 8px;
+    font-size: $font8;
+    }
+
 }

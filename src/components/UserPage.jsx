@@ -17,8 +17,8 @@ export default function UserPage({ data }) {
         <div className="topSection">
           <div className="title">User Details</div>
           <div className="user__btn">
-            <div className="blackUser btn">Blacklist user</div>
-            <div className="actUser btn">Activate user</div>
+            <div className="blackUser btn-3">Blacklist user</div>
+            <div className="actUser btn-3">Activate user</div>
           </div>
         </div>
 

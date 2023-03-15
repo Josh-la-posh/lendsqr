@@ -11,13 +11,22 @@
       
       a {
         display: flex;
-        gap: 15px;
+        gap: 1rem;
         text-decoration: none;
       }
 
       .icon {
         width: 27px;
         height: 10px;
+              
+        @include respond(tab-land) {
+          width: 23px;
+        }
+      
+        @include respond(tab-port) {
+          width: 18px;
+          height: 8px;
+        }
 
         img {
           height: 100%;
@@ -27,6 +36,14 @@
       .text {
         font-size: $font16;
         color: $text-color;
+              
+        @include respond(tab-land) {
+          font-size: $font14;
+        }
+      
+        @include respond(tab-port) {
+          font-size: $font12;
+        }
       }
     }
 
@@ -37,9 +54,16 @@
 
       .title {
         font-size: $font24;
-        font-weight: $weight600;
         color: $color-primary;
         font-weight: $weight500;
+              
+        @include respond(tab-land) {
+          font-size: $font22;
+        }
+      
+        @include respond(tab-port) {
+          font-size: $font18;
+        }
       }
 
       .user__btn {
@@ -50,12 +74,10 @@
         .blackUser {
           color: #e4033b;
           border: 1px solid #e4033b;
-          padding: 12px 16px;
         }
         .actUser {
           color: $custom-color;
           border: 1px solid $custom-color;
-          padding: 12px 16px;
         }
       }
     }
@@ -87,6 +109,16 @@
               align-items: center;
               justify-content: center;
               
+              @include respond(tab-land) {
+                height: 80px;
+                width: 80px;
+              }
+              
+              @include respond(tab-port) {
+                height: 60px;
+                width: 60px;
+              }
+              
               img {
                 width: 100%;
                 height: 100%;
@@ -99,11 +131,28 @@
                 font-weight: $weight500;
                 color: $color-primary;
                 margin-bottom: 8px;
+              
+                @include respond(tab-land) {
+                  font-size: $font20;
+                }
+              
+                @include respond(tab-port) {
+                  font-size: $font16;
+                  margin-bottom: 5px;
+                }
               }
               p {
                 font-size: $font14;
                 font-weight: $weight400;
                 color: $text-color;
+              
+                @include respond(tab-land) {
+                  font-size: $font12;
+                }
+              
+                @include respond(tab-port) {
+                  font-size: $font10;
+                }
               }
             }
           }
@@ -116,7 +165,6 @@
             opacity: 0.2;
 
             img {
-              //   width: 100%;
               height: 100%;
             }
           }
@@ -127,6 +175,14 @@
               font-weight: $weight500;
               font-size: $font14;
               color: $text-color;
+              
+              @include respond(tab-land) {
+                font-size: $font12;
+              }
+            
+              @include respond(tab-port) {
+                font-size: $font10;
+              }
             }
             span {
               display: flex;
@@ -136,6 +192,12 @@
               img {
                 width: 14px;
                 height: 13.5px;
+              
+                @include respond(tab-land) {
+                  
+                width: 10px;
+                height: 10px;
+                }
               }
             }
           }
@@ -146,10 +208,26 @@
             .amount {
               font-size: $font22;
               font-weight: $weight500;
+              
+              @include respond(tab-land) {
+                font-size: $font20;
+              }
+            
+              @include respond(tab-port) {
+                font-size: $font16;
+              }
             }
             p {
               font-size: $font12;
               font-weight: $weight400;
+              
+              @include respond(tab-land) {
+                font-size: $font10;
+              }
+            
+              @include respond(tab-port) {
+                font-size: $font8;
+              }
             }
           }
         }
@@ -163,13 +241,29 @@
               font-weight: $weight400;
               font-size: $font16;
               color: #000;
+              
+              @include respond(tab-land) {
+                font-size: $font14;
+              }
+              
+              @include respond(tab-port) {
+                font-size: $font10;
+              }
             }
             .active {
               color: $custom-color;
               border-bottom: 2px solid $custom-color;
-              width: 160px;
               text-align: center;
+              width: 160px;
               padding-bottom: 10px;
+              
+              @include respond(tab-land) {
+                width: 130px;
+              }
+              
+              @include respond(tab-port) {
+                width: 100px;
+              }
             }
         }
       }
@@ -189,24 +283,64 @@
             font-size: $font16;
             font-weight: $weight500;
             margin-bottom: 30px;
+              
+            @include respond(tab-land) {
+              font-size: $font14;
+            }
+          
+            @include respond(tab-port) {
+              font-size: $font12;
+            }
         }
         .content {
             display: flex;
             gap: 30px;
             flex-wrap: wrap;
+          
+            @include respond(tab-port) {
+              gap: 20px;
+            }
           .details {
+            min-width: 150px;
+          
+            @include respond(tab-land) {
+              min-width: 120px;
+            }
+          
+            @include respond(tab-port) {
+              min-width: unset;
+            }
+            
             .sub-heading {
                 text-transform: uppercase;
                 font-weight: $weight400;
                 font-size: $font12;
                 opacity: 0.6;
                 margin-bottom: 30px;
+              
+                @include respond(tab-land) {
+                  font-size: $font10;
+                }
+              
+                @include respond(tab-port) {
+                  font-size: $font8;
+                  margin-bottom: 20px;
+                }
             }
             .detail {
                 font-size: $font16;
                 font-weight: $weight500;
                 color: $text-color;
                 margin-bottom: 30px;
+              
+                @include respond(tab-land) {
+                  font-size: $font14;
+                }
+              
+                @include respond(tab-port) {
+                  font-size: $font12;
+                  margin-bottom: 20px;
+                }
             }
           }
         }
