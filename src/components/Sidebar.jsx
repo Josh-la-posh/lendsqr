@@ -36,7 +36,7 @@ export default function Sidebar() {
         </div>
 
         <div className="subtitle__container">
-          <div className="subtitle">Settinhs</div>
+          <div className="subtitle">Settings</div>
           <ul className="links">
             <li className="link"><img src="../../images/nav-icon-23.svg" alt="" /> Preferences</li>
             <li className="link"><img src="../../images/nav-icon-24.svg" alt="" /> Fees and Pricing</li>
