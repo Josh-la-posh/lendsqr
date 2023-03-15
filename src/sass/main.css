@@ -70,10 +70,33 @@
   margin: 40px 0;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 7px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5px;
+  }
+}
+
 .card .icon {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .card .icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
 }
 
 .card .icon span img {
@@ -100,6 +123,12 @@
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .card .name {
+    font-size: 8px;
+  }
+}
+
 .card .amount {
   color: #213F7D;
   font-size: 24px;
@@ -109,6 +138,18 @@
 @media only screen and (max-width: 75em) {
   .card .amount {
     font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .card .amount {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .card .amount {
+    font-size: 14px;
   }
 }
 
@@ -383,12 +424,27 @@
   margin-right: 8px;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .rc-pagination-item,
+  .rc-pagination-prev,
+  .rc-pagination-jump-prev,
+  .rc-pagination-jump-next {
+    margin-right: 4px;
+  }
+}
+
 .rc-pagination-total-text {
   margin-right: auto;
   cursor: initial;
   color: #545F7D;
   font-size: 14px;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .rc-pagination-total-text {
+    font-size: 10px;
+  }
 }
 
 .rc-pagination-jump-next,
@@ -408,6 +464,15 @@
   cursor: pointer;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .rc-pagination-jump-next,
+  .rc-pagination-jump-prev,
+  .rc-pagination-next,
+  .rc-pagination-prev {
+    width: 16px;
+  }
 }
 
 .rc-pagination-jump-next button,
@@ -469,6 +534,22 @@
   -o-transition: 0.3s;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .rc-pagination-item a,
+  .rc-pagination-item button,
+  .rc-pagination-prev a,
+  .rc-pagination-prev button,
+  .rc-pagination-next a,
+  .rc-pagination-next button,
+  .rc-pagination-total-text a,
+  .rc-pagination-total-text button {
+    padding: 3px 4px;
+    min-width: unset;
+    min-height: unset;
+    font-size: 12px;
+  }
+}
+
 .rc-pagination-item.rc-pagination-item-active a,
 .rc-pagination-item.rc-pagination-item-active a:hover,
 .rc-pagination-prev.rc-pagination-item-active a,
@@ -499,12 +580,6 @@
 }
 
 @media only screen and (max-width: 56.25em) {
-  .sidebar {
-    width: unset;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
   .sidebar {
     display: none;
   }
@@ -628,6 +703,12 @@
           box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 }
 
+@media only screen and (max-width: 56.25em) {
+  .mainContent .tableContainer {
+    padding: 1rem 0.66rem;
+  }
+}
+
 .mainContent .tableContainer table {
   width: 100%;
   border-collapse: collapse;
@@ -643,20 +724,58 @@
   padding-right: 20px;
 }
 
-.mainContent .tableContainer table thead tr th span {
+@media only screen and (max-width: 75em) {
+  .mainContent .tableContainer table thead tr th {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .mainContent .tableContainer table thead tr th {
+    font-size: 8px;
+    height: 1.4rem;
+    padding-right: 8px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .mainContent .tableContainer table thead tr th {
+    font-size: 6px;
+  }
+}
+
+.mainContent .tableContainer table thead tr th .table__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 10px;
 }
 
-.mainContent .tableContainer table thead tr th span .img {
+@media only screen and (max-width: 56.25em) {
+  .mainContent .tableContainer table thead tr th .table__header {
+    gap: 5px;
+  }
+}
+
+.mainContent .tableContainer table thead tr th .table__header .img {
   width: 1rem;
   height: 0.667rem;
   position: relative;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .mainContent .tableContainer table thead tr th .table__header .img {
+    width: 0.6rem;
+    height: 0.35rem;
+  }
+}
+
+.mainContent .tableContainer table thead tr th .table__header .img img {
+  width: 100%;
+  height: 100%;
 }
 
 .mainContent .tableContainer table tbody tr td {
@@ -668,6 +787,31 @@
   color: #545F7D;
   word-wrap: break-word;
   border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+}
+
+@media only screen and (max-width: 75em) {
+  .mainContent .tableContainer table tbody tr td {
+    padding: 15px 15px 15px 0;
+    max-width: 130px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .mainContent .tableContainer table tbody tr td {
+    padding: 10px 10px 10px 0;
+    max-width: 80px;
+    min-width: 78px;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .mainContent .tableContainer table tbody tr td {
+    max-width: 70px;
+    min-width: unset;
+    font-size: 8px;
+  }
 }
 
 .mainContent .tableContainer table tbody tr td a {
@@ -739,6 +883,12 @@
       -ms-flex: 4;
           flex: 4;
   overflow-y: scroll;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .dashboard__content {
+    padding: 20px;
+  }
 }
 
 .dashboard__content .pageTitle {
@@ -863,6 +1013,13 @@
   padding: 0 60px;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .user__container .user {
+    margin-top: 25px;
+    padding: 0 20px;
+  }
+}
+
 .user__container .user .backButton {
   margin-bottom: 32px;
 }
@@ -972,8 +1129,21 @@
   border: 1px solid rgba(33, 63, 125, 0.06);
 }
 
+@media only screen and (max-width: 56.25em) {
+  .user__container .user__card {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+}
+
 .user__container .user__card-container {
   padding: 30px 30px 0 30px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .user__container .user__card-container {
+    padding: 15px 0px 0 0px;
+  }
 }
 
 .user__container .user__card-container .top {
@@ -985,6 +1155,12 @@
           align-items: center;
   gap: 1.875rem;
   margin-bottom: 51px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .user__container .user__card-container .top {
+    margin-bottom: 30px;
+  }
 }
 
 .user__container .user__card-container .top .user__profile {
@@ -1022,6 +1198,13 @@
   .user__container .user__card-container .top .user__profile-img {
     height: 60px;
     width: 60px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .user__container .user__card-container .top .user__profile-img {
+    height: 40px;
+    width: 40px;
   }
 }
 
@@ -1069,12 +1252,24 @@
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .user__container .user__card-container .top .user__profile-detail p {
+    font-size: 8px;
+  }
+}
+
 .user__container .user__card-container .top .line {
   height: 80px;
   width: 0px;
   color: #545F7D;
   border: 1px solid #545F7D;
   opacity: 0.2;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .user__container .user__card-container .top .line {
+    height: 50px;
+  }
 }
 
 .user__container .user__card-container .top .line img {
@@ -1140,6 +1335,12 @@
 @media only screen and (max-width: 56.25em) {
   .user__container .user__card-container .top .user__account .amount {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .user__container .user__card-container .top .user__account .amount {
+    font-size: 14px;
   }
 }
 
@@ -1219,6 +1420,12 @@
   padding: 30px;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .user__container .user__info {
+    padding: 20px 10px;
+  }
+}
+
 .user__container .user__info-container {
   min-width: 150px;
 }
@@ -1239,6 +1446,12 @@
 @media only screen and (max-width: 56.25em) {
   .user__container .user__info-container .heading {
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .user__container .user__info-container .heading {
+    font-size: 10px;
   }
 }
 
@@ -1289,8 +1502,13 @@
 
 @media only screen and (max-width: 56.25em) {
   .user__container .user__info-container .content .details .sub-heading {
-    font-size: 8px;
     margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .user__container .user__info-container .content .details .sub-heading {
+    font-size: 8px;
   }
 }
 
@@ -1311,6 +1529,12 @@
   .user__container .user__info-container .content .details .detail {
     font-size: 12px;
     margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .user__container .user__info-container .content .details .detail {
+    font-size: 10px;
   }
 }
 

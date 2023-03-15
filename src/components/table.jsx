@@ -103,7 +103,7 @@ export default function Table() {
               {headers.map((header, index) => {
                 return (
                   <th key={index}>
-                    <span>
+                    <span className="table__header">
                       {header}{" "}
                       <span
                         className="img"

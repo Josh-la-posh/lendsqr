@@ -6,9 +6,14 @@
     margin-top: 65px;
     padding: 0 60px;
 
+    @include respond(tab-port) {
+      margin-top: 25px;
+      padding: 0 20px;
+    }
+
     .backButton {
       margin-bottom: 32px;
-      
+
       a {
         display: flex;
         gap: 1rem;
@@ -18,11 +23,11 @@
       .icon {
         width: 27px;
         height: 10px;
-              
+
         @include respond(tab-land) {
           width: 23px;
         }
-      
+
         @include respond(tab-port) {
           width: 18px;
           height: 8px;
@@ -36,11 +41,11 @@
       .text {
         font-size: $font16;
         color: $text-color;
-              
+
         @include respond(tab-land) {
           font-size: $font14;
         }
-      
+
         @include respond(tab-port) {
           font-size: $font12;
         }
@@ -56,11 +61,11 @@
         font-size: $font24;
         color: $color-primary;
         font-weight: $weight500;
-              
+
         @include respond(tab-land) {
           font-size: $font22;
         }
-      
+
         @include respond(tab-port) {
           font-size: $font18;
         }
@@ -89,13 +94,26 @@
       box-shadow: $shadow;
       border: 1px solid rgba(33, 63, 125, 0.06);
 
+      @include respond(tab-port) {
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+
       &-container {
         padding: 30px 30px 0 30px;
+
+        @include respond(tab-port) {
+          padding: 15px 0px 0 0px;
+        }
         .top {
           display: flex;
           align-items: center;
           gap: 1.875rem;
           margin-bottom: 51px;
+
+          @include respond(tab-port) {
+            margin-bottom: 30px;
+          }
 
           .user__profile {
             display: flex;
@@ -108,17 +126,22 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              
+
               @include respond(tab-land) {
                 height: 80px;
                 width: 80px;
               }
-              
+
               @include respond(tab-port) {
                 height: 60px;
                 width: 60px;
               }
-              
+
+              @include respond(phone) {
+                height: 40px;
+                width: 40px;
+              }
+
               img {
                 width: 100%;
                 height: 100%;
@@ -131,27 +154,34 @@
                 font-weight: $weight500;
                 color: $color-primary;
                 margin-bottom: 8px;
-              
+
                 @include respond(tab-land) {
                   font-size: $font20;
                 }
-              
+
                 @include respond(tab-port) {
                   font-size: $font16;
                   margin-bottom: 5px;
+                }
+
+                @include respond(phone) {
                 }
               }
               p {
                 font-size: $font14;
                 font-weight: $weight400;
                 color: $text-color;
-              
+
                 @include respond(tab-land) {
                   font-size: $font12;
                 }
-              
+
                 @include respond(tab-port) {
                   font-size: $font10;
+                }
+
+                @include respond(phone) {
+                  font-size: $font8;
                 }
               }
             }
@@ -164,6 +194,10 @@
             border: 1px solid $text-color;
             opacity: 0.2;
 
+            @include respond(tab-port) {
+              height: 50px;
+            }
+
             img {
               height: 100%;
             }
@@ -175,11 +209,11 @@
               font-weight: $weight500;
               font-size: $font14;
               color: $text-color;
-              
+
               @include respond(tab-land) {
                 font-size: $font12;
               }
-            
+
               @include respond(tab-port) {
                 font-size: $font10;
               }
@@ -192,11 +226,10 @@
               img {
                 width: 14px;
                 height: 13.5px;
-              
+
                 @include respond(tab-land) {
-                  
-                width: 10px;
-                height: 10px;
+                  width: 10px;
+                  height: 10px;
                 }
               }
             }
@@ -208,23 +241,27 @@
             .amount {
               font-size: $font22;
               font-weight: $weight500;
-              
+
               @include respond(tab-land) {
                 font-size: $font20;
               }
-            
+
               @include respond(tab-port) {
                 font-size: $font16;
+              }
+
+              @include respond(phone) {
+                font-size: $font14;
               }
             }
             p {
               font-size: $font12;
               font-weight: $weight400;
-              
+
               @include respond(tab-land) {
                 font-size: $font10;
               }
-            
+
               @include respond(tab-port) {
                 font-size: $font8;
               }
@@ -238,117 +275,132 @@
           justify-content: space-between;
           padding: 0 6px;
           .text {
-              font-weight: $weight400;
-              font-size: $font16;
-              color: #000;
-              
-              @include respond(tab-land) {
-                font-size: $font14;
-              }
-              
-              @include respond(tab-port) {
-                font-size: $font10;
-              }
+            font-weight: $weight400;
+            font-size: $font16;
+            color: #000;
+
+            @include respond(tab-land) {
+              font-size: $font14;
             }
-            .active {
-              color: $custom-color;
-              border-bottom: 2px solid $custom-color;
-              text-align: center;
-              width: 160px;
-              padding-bottom: 10px;
-              
-              @include respond(tab-land) {
-                width: 130px;
-              }
-              
-              @include respond(tab-port) {
-                width: 100px;
-              }
+
+            @include respond(tab-port) {
+              font-size: $font10;
             }
+          }
+          .active {
+            color: $custom-color;
+            border-bottom: 2px solid $custom-color;
+            text-align: center;
+            width: 160px;
+            padding-bottom: 10px;
+
+            @include respond(tab-land) {
+              width: 130px;
+            }
+
+            @include respond(tab-port) {
+              width: 100px;
+            }
+          }
         }
       }
     }
 
     &__info {
-        width: 100%;
-        box-shadow: $shadow;
-        border: 1px solid rgba(33, 63, 125, 0.06);
-        padding: 30px;
+      width: 100%;
+      box-shadow: $shadow;
+      border: 1px solid rgba(33, 63, 125, 0.06);
+      padding: 30px;
+
+      @include respond(tab-port) {
+       padding: 20px 10px;
+      }
 
       &-container {
-          min-width: 150px;
-          
+        min-width: 150px;
+
         .heading {
-            color: $color-primary;
-            font-size: $font16;
-            font-weight: $weight500;
-            margin-bottom: 30px;
-              
-            @include respond(tab-land) {
-              font-size: $font14;
-            }
-          
-            @include respond(tab-port) {
-              font-size: $font12;
-            }
+          color: $color-primary;
+          font-size: $font16;
+          font-weight: $weight500;
+          margin-bottom: 30px;
+
+          @include respond(tab-land) {
+            font-size: $font14;
+          }
+
+          @include respond(tab-port) {
+            font-size: $font12;
+          }
+
+          @include respond(phone) {
+            font-size: $font10;
+          }
         }
         .content {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-          
-            @include respond(tab-port) {
-              gap: 20px;
-            }
+          display: flex;
+          gap: 30px;
+          flex-wrap: wrap;
+
+          @include respond(tab-port) {
+            gap: 20px;
+          }
           .details {
             min-width: 150px;
-          
+
             @include respond(tab-land) {
               min-width: 120px;
             }
-          
+
             @include respond(tab-port) {
               min-width: unset;
             }
-            
+
             .sub-heading {
-                text-transform: uppercase;
-                font-weight: $weight400;
-                font-size: $font12;
-                opacity: 0.6;
-                margin-bottom: 30px;
-              
-                @include respond(tab-land) {
-                  font-size: $font10;
-                }
-              
-                @include respond(tab-port) {
-                  font-size: $font8;
-                  margin-bottom: 20px;
-                }
+              text-transform: uppercase;
+              font-weight: $weight400;
+              font-size: $font12;
+              opacity: 0.6;
+              margin-bottom: 30px;
+
+              @include respond(tab-land) {
+                font-size: $font10;
+              }
+
+              @include respond(tab-port) {
+                margin-bottom: 20px;
+              }
+
+              @include respond(phone) {
+                font-size: $font8;
+              }
             }
             .detail {
-                font-size: $font16;
-                font-weight: $weight500;
-                color: $text-color;
-                margin-bottom: 30px;
-              
-                @include respond(tab-land) {
-                  font-size: $font14;
-                }
-              
-                @include respond(tab-port) {
-                  font-size: $font12;
-                  margin-bottom: 20px;
-                }
+              font-size: $font16;
+              font-weight: $weight500;
+              color: $text-color;
+              margin-bottom: 30px;
+
+              @include respond(tab-land) {
+                font-size: $font14;
+              }
+
+              @include respond(tab-port) {
+                font-size: $font12;
+                margin-bottom: 20px;
+              }
+
+              @include respond(phone) {
+                font-size: $font10;
+              }
             }
           }
         }
       }
 
       hr {
-          border: 1px solid rgba($color-primary, 0.1);
-          margin-bottom: 30px;
+        border: 1px solid rgba($color-primary, 0.1);
+        margin-bottom: 30px;
       }
     }
   }

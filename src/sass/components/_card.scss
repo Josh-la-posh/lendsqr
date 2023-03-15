@@ -9,11 +9,24 @@
     border-radius: 4px;
     background: #FFFFFF;
     margin: 40px 0;
+    
+    @include respond(tab-port) {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
 
     .icon {
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 50%;
+    
+        @include respond(tab-port) {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
 
         span {
 
@@ -37,6 +50,10 @@
         @include respond(tab-port) {
             font-size: $font10;
         }
+        
+        @include respond(phone) {
+            font-size: $font8;
+        }
     }
 
     .amount {
@@ -48,8 +65,12 @@
             font-size: $font20;
         }
         
-        @include respond(tab-[port]) {
+        @include respond(tab-port) {
             font-size: $font16;
+        }
+        
+        @include respond(phone) {
+            font-size: $font14;
         }
     }
 }

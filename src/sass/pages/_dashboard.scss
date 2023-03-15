@@ -15,6 +15,10 @@
     flex: 4;
     overflow-y: scroll;
 
+    @include respond(tab-port) {
+      padding: 20px;
+    }
+
     .pageTitle {
       color: $color-primary;
       font-size: $font24;

@@ -4,10 +4,6 @@
   margin-bottom: 1.938rem;
 
   @include respond(tab-port) {
-      width: unset;
-  }
-
-  @include respond(phone) {
       display: none;
   }
 
