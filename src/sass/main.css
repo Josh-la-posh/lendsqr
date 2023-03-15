@@ -145,25 +145,35 @@
   -webkit-box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
           box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
-  background-color: #eee;
+  background-color: #fff;
   position: absolute;
-  top: 37px;
-  right: -30px;
+  top: 50px;
+  right: -70px;
+  z-index: 100;
 }
 
 .popup__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 10px;
   margin-top: 20px;
   margin-left: 22px;
   color: #545F7D;
   font-size: 14px;
   font-weight: 500;
+}
+
+.popup__container span {
+  width: 15.1px;
+  height: 9.73px;
+  position: relative;
+}
+
+.popup__container span .img-2 {
+  position: absolute;
+  top: 52.5%;
+  left: 28%;
 }
 
 .form-title {
@@ -490,6 +500,15 @@
   border-bottom: 1px solid rgba(33, 63, 125, 0.1);
 }
 
+.mainContent table tbody tr td a {
+  text-decoration: none;
+  color: #545F7D;
+}
+
+.mainContent table tbody tr td a:hover {
+  text-decoration: underline;
+}
+
 .mainContent table tbody tr .status {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -502,8 +521,9 @@
           align-items: center;
 }
 
-.mainContent table tbody tr .status span {
-  background-color: rgba(0, 0, 0, 0.1);
+.mainContent table tbody tr .status .active {
+  background-color: rgba(57, 205, 98, 0.06);
+  color: #39CD62;
   height: 14px;
   padding: 0.438rem 0.75rem;
   border-radius: 100px;
@@ -525,6 +545,35 @@
 .mainContent table tbody tr .status .img img {
   width: 3.33px;
   height: 14.44px;
+}
+
+.dashboardPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+.dashboardPage .dashboard {
+  padding: 60px;
+  background-color: #FBFBFB;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  overflow-y: scroll;
+}
+
+.dashboardPage .dashboard .pageTitle {
+  color: #213F7D;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.dashboardPage .dashboard .cardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 26px;
 }
 
 .login {
@@ -578,33 +627,272 @@
   margin-left: 116px;
 }
 
-.dashboardPage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.user__container {
   height: calc(100vh - 100px);
-}
-
-.dashboardPage .dashboard {
-  padding: 60px;
-  background-color: #E5E5E5;
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
-  overflow-y: scroll;
 }
 
-.dashboardPage .dashboard .pageTitle {
-  color: #213F7D;
-  font-size: 24px;
-  font-weight: 500;
+.user__container .user {
+  margin-top: 65px;
+  padding: 0 60px;
 }
 
-.dashboardPage .dashboard .cardContainer {
+.user__container .user .backButton {
+  margin-bottom: 32px;
+}
+
+.user__container .user .backButton a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 26px;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.user__container .user .backButton .icon {
+  width: 27px;
+  height: 10px;
+}
+
+.user__container .user .backButton .icon img {
+  height: 100%;
+  width: 100%;
+}
+
+.user__container .user .backButton .text {
+  font-size: 16px;
+  color: #545F7D;
+}
+
+.user__container .user .topSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.user__container .user .topSection .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #213F7D;
+  font-weight: 500;
+}
+
+.user__container .user .topSection .user__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  text-transform: uppercase;
+}
+
+.user__container .user .topSection .user__btn .blackUser {
+  color: #e4033b;
+  border: 1px solid #e4033b;
+  padding: 12px 16px;
+}
+
+.user__container .user .topSection .user__btn .actUser {
+  color: #39CDCC;
+  border: 1px solid #39CDCC;
+  padding: 12px 16px;
+}
+
+.user__container .user__card {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 100%;
+  -webkit-box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+          box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(33, 63, 125, 0.06);
+}
+
+.user__container .user__card-container {
+  padding: 30px 30px 0 30px;
+}
+
+.user__container .user__card-container .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.875rem;
+  margin-bottom: 51px;
+}
+
+.user__container .user__card-container .top .user__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.user__container .user__card-container .top .user__profile-img {
+  height: 100px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.user__container .user__card-container .top .user__profile-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.user__container .user__card-container .top .user__profile-detail span {
+  font-size: 22px;
+  font-weight: 500;
+  color: #213F7D;
+  margin-bottom: 8px;
+}
+
+.user__container .user__card-container .top .user__profile-detail p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #545F7D;
+}
+
+.user__container .user__card-container .top .line {
+  height: 80px;
+  width: 0px;
+  color: #545F7D;
+  border: 1px solid #545F7D;
+  opacity: 0.2;
+}
+
+.user__container .user__card-container .top .line img {
+  height: 100%;
+}
+
+.user__container .user__card-container .top .user__rank p {
+  margin-bottom: 11.29px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #545F7D;
+}
+
+.user__container .user__card-container .top .user__rank span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5.55px;
+}
+
+.user__container .user__card-container .top .user__rank span img {
+  width: 14px;
+  height: 13.5px;
+}
+
+.user__container .user__card-container .top .user__account {
+  color: #213F7D;
+}
+
+.user__container .user__card-container .top .user__account .amount {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.user__container .user__card-container .top .user__account p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.user__container .user__card-container .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 6px;
+}
+
+.user__container .user__card-container .bottom .text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+
+.user__container .user__card-container .bottom .active {
+  color: #39CDCC;
+  border-bottom: 2px solid #39CDCC;
+  width: 160px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.user__container .user__info {
+  width: 100%;
+  -webkit-box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+          box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  padding: 30px;
+}
+
+.user__container .user__info-container {
+  min-width: 150px;
+}
+
+.user__container .user__info-container .heading {
+  color: #213F7D;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.user__container .user__info-container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.user__container .user__info-container .content .details .sub-heading {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.user__container .user__info-container .content .details .detail {
+  font-size: 16px;
+  font-weight: 500;
+  color: #545F7D;
+  margin-bottom: 30px;
+}
+
+.user__container .user__info hr {
+  border: 1px solid rgba(33, 63, 125, 0.1);
+  margin-bottom: 30px;
 }
 
 .header {

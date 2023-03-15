@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Pagination from "rc-pagination";
 import { URL } from "../url";
@@ -11,7 +12,17 @@ export default function DashboardContent() {
   const [perPage, setPerPage] = useState(9);
   const [size, setSize] = useState(perPage);
   const [current, setCurrent] = useState(1);
-  const [isDropdown, setIsDropDown] = useState(false);
+  const [isDropdown, setIsDropDown] = useState(null);
+  const [isOptionOpen, setIsOptionOpen] = useState(null);
+
+  const headers = [
+    "organization",
+    "username",
+    "email",
+    "phone number",
+    "date joined",
+    "status",
+  ];
 
   const PerPageChange = (value) => {
     setSize(value);
@@ -55,9 +66,19 @@ export default function DashboardContent() {
     });
   }
 
-  function dropdownHandler(id) {
-    if (id) {
-      setIsDropDown(!isDropdown);
+  function dropdownHandler(index) {
+    if (isDropdown === index) {
+      setIsDropDown(null);
+    } else {
+      setIsDropDown(index);
+    }
+  }
+
+  function optionOpenHandler(id) {
+    if (isOptionOpen === id) {
+      setIsOptionOpen(null);
+    } else {
+      setIsOptionOpen(id);
     }
   }
 
@@ -65,7 +86,6 @@ export default function DashboardContent() {
     getDataFromApi();
     console.log(data);
   }, []);
-
 
   return (
     <div className="dashboard">
@@ -81,36 +101,22 @@ export default function DashboardContent() {
         <table>
           <thead>
             <tr>
-              <th>
-                <span>
-                  organization <span className="img" onClick={(id)=>dropdownHandler(id)}><img src="../../images/vector.png" alt="" /> {isDropdown && <DropdownForm />}</span>
-                </span>
-              </th>
-              <th>
-                <span>
-                  username <span className="img" onClick={dropdownHandler}><img src="../../images/vector.png" alt="" /> {isDropdown && <DropdownForm />}</span>
-                </span>
-              </th>
-              <th>
-                <span>
-                  email <span className="img" onClick={dropdownHandler}><img src="../../images/vector.png" alt="" /> {isDropdown && <DropdownForm />}</span>
-                </span>
-              </th>
-              <th>
-                <span>
-                  phone number <span className="img" onClick={dropdownHandler}><img src="../../images/vector.png" alt="" /> {isDropdown && <DropdownForm />}</span>
-                </span>
-              </th>
-              <th>
-                <span>
-                  date joined <span className="img" onClick={dropdownHandler}><img src="../../images/vector.png" alt="" /> {isDropdown && <DropdownForm />}</span>
-                </span>
-              </th>
-              <th>
-                <span>
-                  status <span className="img" onClick={dropdownHandler}><img src="../../images/vector.png" alt="" /> {isDropdown && <DropdownForm />}</span>
-                </span>
-              </th>
+              {headers.map((header, index) => {
+                return (
+                  <th key={index}>
+                    <span>
+                      {header}{" "}
+                      <span
+                        className="img"
+                        onClick={() => dropdownHandler(index)}
+                      >
+                        <img src="../../images/vector.png" alt="" />{" "}
+                        {isDropdown === index && <DropdownForm />}
+                      </span>
+                    </span>
+                  </th>
+                );
+              })}
             </tr>
           </thead>
           <tbody>
@@ -119,14 +125,24 @@ export default function DashboardContent() {
                 ({ id, orgName, email, phoneNumber, userName }) => {
                   return (
                     <tr key={id}>
-                      <td style={{textTransform: 'capitalize'}}>{orgName}</td>
+                      <td style={{ textTransform: "capitalize" }}>
+                        <Link to={`/user/${id}`}>{orgName}</Link>
+                      </td>
                       <td>{userName}</td>
                       <td>{email}</td>
                       <td>{phoneNumber}</td>
                       <td>May 15, 2020 10:10 AM</td>
-                      <td className="status">
-                        <span>Inactive</span>{" "}
-                        <span className="img"><img src="../../images/3dot.png" alt="" /> <PopupForm /></span>
+                      <td>
+                        <div className="status">
+                          <span className="active">Active</span>{" "}
+                          <span
+                            className="img"
+                            onClick={() => optionOpenHandler(id)}
+                          >
+                            <img src="../../images/3dot.png" alt="" />{" "}
+                            {isOptionOpen === id && <PopupForm />}
+                          </span>
+                        </div>
                       </td>
                     </tr>
                   );

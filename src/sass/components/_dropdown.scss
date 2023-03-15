@@ -60,19 +60,31 @@
     border: $border;
     box-shadow: $shadow;
     border-radius: 4px;
-    background-color: #eee;
+    background-color: #fff;
     position: absolute;
-    top: 37px;
-    right: -30px;
+    top: 50px;
+    right: -70px;
+    z-index: 100;
 
     &__container {
         display: flex;
-        align-items: center;
         gap: 10px;
         margin-top: 20px;
         margin-left: 22px;
         color: $text-color;
         font-size: 14px;
         font-weight: 500;
+
+        span {
+            width: 15.1px;
+            height: 9.73px;
+            position: relative;
+
+            .img-2 {
+                position: absolute;
+                top: 52.5%;
+                left: 28%;
+            }
+        }
     }
 }

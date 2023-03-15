@@ -37,13 +37,13 @@ export const PopupForm = () => {
     return (
         <div className="popup">
             <div className="popup__container">
-                <span><img src="../../images/outer-eye.png" alt="" /> <img src="../../images/inner-eye.png" alt="" /></span><img src="../../images/user.png" alt="" /> View Details
+                <span><img src="../../images/outer-eye.png" alt=""  style={{width: '15.1px', height: '9.73px'}} /> <img src="../../images/inner-eye.png" alt="" style={{width: '5.98px', height: '5.98px'}} className="img-2" /></span> View Details
             </div>
             <div className="popup__container">
-                <img src="../../images/black-user.png" alt="" /> Blacklist User
+                <img src="../../images/black-user.png" alt="" style={{width: '11px', height: '13.13px'}}/> Blacklist User
             </div>
             <div className="popup__container">
-                <img src="../../images/act-user.png" alt="" /> Activate User
+                <img src="../../images/act-user.png" alt="" style={{width: '12.57px', height: '12.59px'}} /> Activate User
             </div>
         </div>
     )
